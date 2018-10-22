@@ -1,0 +1,4 @@
+[tasks.release]
+script = [
+    "docker run --rm -it -v \"${CARGO_MAKE_WORKING_DIRECTORY}\":/home/rust/src ekidd/rust-musl-builder cargo build --release"
+]

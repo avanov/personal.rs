@@ -1,0 +1,15 @@
+version: "2"
+services:
+  redis:
+    image: redis:5.0.0-alpine3.8
+    ports:
+      - 6379:6379
+
+  postgres:
+    image: postgres:11.0-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: personal
+    ports:
+      - 5433:5432
